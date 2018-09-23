@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { PlantInfos } from '../../services/plant-infos-model';
 
 @Component({
@@ -6,13 +6,10 @@ import { PlantInfos } from '../../services/plant-infos-model';
   templateUrl: './plant-card.component.html',
   styleUrls: ['./plant-card.component.css']
 })
-export class PlantCardComponent implements OnInit {
+export class PlantCardComponent {
    @Input() selectedPlant: PlantInfos;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   goToWiki () {
       window.open(`https://fr.wikipedia.org/wiki/${this.selectedPlant.name}`);

@@ -3,10 +3,9 @@
     <mat-card-title>{{selectedPlant.name}}</mat-card-title>
     <mat-card-subtitle>{{selectedPlant.id}}</mat-card-subtitle>
   </mat-card-header>
+  <img class="card-img" mat-card-image src="{{selectedPlant.imgUrl}}" alt='Photo of a {{selectedPlant.name}}'>
   <mat-card-content>
-    <p>
-      {{selectedPlant.category}}
-    </p>
+      category : {{selectedPlant.category}}
   </mat-card-content>
   <mat-card-actions>
     <button (click)="goToWiki()" mat-button>More Infos</button>

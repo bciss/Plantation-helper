@@ -4,10 +4,9 @@
   </h1>
 </div>
 <app-notification></app-notification>
-<mat-form-field class="example-full-width">
-<input matInput #plant
+<hr />
+<input #plant name="plant"
        (keyup.enter)="searchPlant(plant.value)">
-</mat-form-field>
 
 <button mat-button (click)="searchPlant(plant.value)">Add</button>
 
@@ -16,7 +15,13 @@
 </div>
 
 <ng-template #noselection>
-  <p>please select something present on our Database</p>
-  <p>try: fruit1 or fruit2</p>
+  <p>please try something present in our Database : </p>
+  <ul>
+    <li>fruit1</li>
+    <li>fruit2</li>
+    <li>legume1</li>
+    <li>legume2</li>
+    <li>legume3</li>
+  </ul>
 </ng-template>
 

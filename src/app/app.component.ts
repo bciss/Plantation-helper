@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   searchPlant (p_name: string) {
     this.plantInfosService.getPlantInfos(p_name).then(value => {
       this.selectedPlant = value as PlantInfos;
-      console.log(this.selectedPlant);
     });
   }
 }

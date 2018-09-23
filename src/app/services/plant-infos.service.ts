@@ -21,7 +21,6 @@ export class PlantInfosService {
       const todaysList: string[] = [];
         for (const plant in MockDB) {
             if (p_date >= MockDB[plant].plantation.from && p_date <= MockDB[plant].plantation.upto) {
-                console.log(plant);
                 todaysList.push(MockDB[plant].name);
             }
         }
@@ -32,7 +31,6 @@ export class PlantInfosService {
         const todaysList: string[] = [];
         for (const plant in MockDB) {
             if (p_date >= MockDB[plant].harvest.from && p_date <= MockDB[plant].harvest.upto) {
-                console.log(plant);
                 todaysList.push(MockDB[plant].name);
             }
         }

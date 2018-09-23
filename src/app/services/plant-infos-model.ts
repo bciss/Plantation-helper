@@ -10,4 +10,5 @@ export interface PlantInfos {
         from: Date,
         upto: Date,
     };
+    imgUrl: string;
 }
