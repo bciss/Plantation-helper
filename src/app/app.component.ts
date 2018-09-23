@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { PlantInfosService } from './services/plant-infos.service';
 import { PlantInfos } from './services/plant-infos-model';
 
@@ -9,7 +9,8 @@ import { PlantInfos } from './services/plant-infos-model';
 })
 export class AppComponent implements OnInit {
   title = 'Platation Helper';
-  selectedPlant: PlantInfos;
+
+  @Input() selectedPlant: PlantInfos;
 
   constructor(private plantInfosService: PlantInfosService) {}
 
@@ -20,9 +21,5 @@ export class AppComponent implements OnInit {
       this.selectedPlant = value as PlantInfos;
       console.log(this.selectedPlant);
     });
-  }
-
-  goToWiki () {
-      window.open(`https://fr.wikipedia.org/wiki/${this.selectedPlant.name}`);
   }
 }

@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PlantCardComponent } from './components/plant-card/plant-card.component';
 
 import { PlantInfosService } from './services/plant-infos.service';
 
@@ -12,7 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlantCardComponent
   ],
   imports: [
     BrowserModule,

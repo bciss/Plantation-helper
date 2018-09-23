@@ -21,7 +21,7 @@ export const MockDB = {
     },
     legume3: {
             id: 5555555,
-            name: 'legume2',
+            name: 'legume3',
             category: 'super legume'
     }
 };

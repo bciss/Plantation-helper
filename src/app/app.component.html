@@ -12,21 +12,7 @@
 <button mat-button (click)="searchPlant(plant.value)">Add</button>
 
 <div *ngIf="selectedPlant; else noselection">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{selectedPlant.name}}</mat-card-title>
-      <mat-card-subtitle>{{selectedPlant.id}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{selectedPlant.category}}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button (click)="goToWiki()" mat-button>More Infos</button>
-
-    </mat-card-actions>
-  </mat-card>
+  <app-plant-card [selectedPlant]="selectedPlant"></app-plant-card>
 </div>
 
 <ng-template #noselection>
