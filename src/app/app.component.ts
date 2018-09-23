@@ -21,4 +21,8 @@ export class AppComponent implements OnInit {
       console.log(this.selectedPlant);
     });
   }
+
+  goToWiki () {
+      window.open(`https://fr.wikipedia.org/wiki/${this.selectedPlant.name}`);
+  }
 }
