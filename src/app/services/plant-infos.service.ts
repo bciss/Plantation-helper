@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { MockDB } from '../mock/plant-infos';
 import { PlantInfos } from './plant-infos-model';
-import {forEach} from '../../../node_modules/@angular/router/src/utils/collection';
 
+
+/*
+** this service is the link between this application and the Database PlantInfosDB
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class PlantInfosService {
 
+  // TODO: link with an actual DB
   constructor() {
   }
 

@@ -11,6 +11,7 @@ export class PlantCardComponent {
 
   constructor() { }
 
+  // open a new wikipedia tab that gives you infos on the selected fruit or vegetable
   goToWiki () {
       window.open(`https://fr.wikipedia.org/wiki/${this.selectedPlant.name}`);
   }

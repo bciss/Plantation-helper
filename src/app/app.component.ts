@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  // search in the DB the specified fruit or vegetable
   searchPlant (p_name: string) {
     this.plantInfosService.getPlantInfos(p_name).then(value => {
       this.selectedPlant = value as PlantInfos;

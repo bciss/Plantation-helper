@@ -12,6 +12,7 @@ export class NotificationComponent implements OnInit {
   date: Date;
   todaysPlantation;
   todaysHarvest;
+
   constructor(private plantInfosService: PlantInfosService) { }
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class NotificationComponent implements OnInit {
     this.todaysToDoList();
   }
 
+  // update the infos of what you need to take care of today
   todaysToDoList() {
     this.todaysPlantation = this.plantInfosService.getTodaysPlantation(<Date><any>moment(this.date).format('MM/DD/YYYY') as Date);
     this.todaysHarvest = this.plantInfosService.getTodaysHarvest(<Date><any>moment(this.date).format('MM/DD/YYYY'));
