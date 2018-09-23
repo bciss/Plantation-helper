@@ -4,11 +4,32 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <input #plant
-         (keyup.enter)="searchPlant(plant.value)">
+<mat-form-field class="example-full-width">
+<input matInput #plant
+       (keyup.enter)="searchPlant(plant.value)">
+</mat-form-field>
 
-  <button (click)="searchPlant(plant.value)">Add</button>
-</ul>
+<button mat-button (click)="searchPlant(plant.value)">Add</button>
+
+<div *ngIf="selectedPlant; else noselection">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{selectedPlant.name}}</mat-card-title>
+      <mat-card-subtitle>{{selectedPlant.id}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{selectedPlant.category}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>More Infos</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #noselection>
+  <p>please select something present on our Database</p>
+  <p>try: fruit1 or fruit2</p>
+</ng-template>
 
