@@ -1,3 +1,11 @@
 <p>
-  today is : {{date | date }}
+  today is : {{date | date}}
+
+  <mat-card class="plantation-card" *ngFor="let plant of todaysPlantation">
+    you should plant {{ plant }} today
+  </mat-card>
+
+  <mat-card class="harvest-card" *ngFor="let plant of todaysHarvest">
+    you should harvest {{ plant }} today
+  </mat-card>
 </p>
