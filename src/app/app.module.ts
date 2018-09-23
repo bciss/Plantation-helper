@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PlantCardComponent } from './components/plant-card/plant-card.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 import { PlantInfosService } from './services/plant-infos.service';
 
@@ -14,7 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
-    PlantCardComponent
+    PlantCardComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@ import { PlantInfos } from './services/plant-infos-model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Platation Helper';
+  title = 'Plantation Helper';
 
   @Input() selectedPlant: PlantInfos;
 
