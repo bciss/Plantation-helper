@@ -3,12 +3,12 @@ export interface PlantInfos {
     name: string;
     category: string;
     plantation: {
-        from: Date,
-        upto: Date,
+        from: string,
+        upto: string,
     };
     harvest: {
-        from: Date,
-        upto: Date,
+        from: string,
+        upto: string,
     };
     imgUrl: string;
 }
